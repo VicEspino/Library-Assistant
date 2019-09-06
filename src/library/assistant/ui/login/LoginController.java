@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import library.assistant.ui.settings.Preferences;
@@ -64,9 +65,12 @@ public class LoginController implements Initializable {
     void loadMain() {
         try {
             Parent parent = FXMLLoader.load(getClass().getResource("/library/assistant/ui/main/main.fxml"));
-            Stage stage = new Stage(StageStyle.DECORATED);
+            Stage stage = new Stage(StageStyle.TRANSPARENT);
+            
             stage.setTitle("Library Assistant");
-            stage.setScene(new Scene(parent));
+            Scene scene = new Scene(parent);
+            scene.setFill(Color.TRANSPARENT);
+            stage.setScene(scene);
             stage.show();
             LibraryAssistantUtil.setStageIcon(stage);
         }

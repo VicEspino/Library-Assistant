@@ -190,6 +190,8 @@
 /*Custom window background*/
 .custom-pane{
     -fx-background-color: derive(-fx-primary, 5%);
+       -fx-background-insets: 12;
+      -fx-effect: dropshadow( gaussian, rgba(0, 0, 0, .32), 10, 0.8, 0.0, 0.0 );
 }
 
 /*TableView Default*/

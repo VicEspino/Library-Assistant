@@ -57,70 +57,14 @@ public class MainController implements Initializable, BookReturnCallback {
     private PieChart bookChart;
     private PieChart memberChart;
 
-    @FXML
-    private HBox book_info;
-    @FXML
-    private HBox member_info;
-    @FXML
-    private TextField bookIDInput;
-    @FXML
-    private Text bookName;
-    @FXML
-    private Text bookAuthor;
-    @FXML
-    private Text bookStatus;
-    @FXML
-    private TextField memberIDInput;
-    @FXML
-    private Text memberName;
-    @FXML
-    private Text memberMobile;
-    @FXML
-    private JFXTextField bookID;
+ 
     @FXML
     private StackPane rootPane;
     @FXML
     private JFXHamburger hamburger;
     @FXML
     private JFXDrawer drawer;
-    @FXML
-    private Text memberNameHolder;
-    @FXML
-    private Text memberEmailHolder;
-    @FXML
-    private Text memberContactHolder;
-    @FXML
-    private Text bookNameHolder;
-    @FXML
-    private Text bookAuthorHolder;
-    @FXML
-    private Text bookPublisherHolder;
-    @FXML
-    private Text issueDateHolder;
-    @FXML
-    private Text numberDaysHolder;
-    @FXML
-    private Text fineInfoHolder;
-    @FXML
-    private AnchorPane rootAnchorPane;
-    @FXML
-    private JFXButton renewButton;
-    @FXML
-    private JFXButton submissionButton;
-    @FXML
-    private HBox submissionDataContainer;
-    @FXML
-    private StackPane bookInfoContainer;
-    @FXML
-    private StackPane memberInfoContainer;
-    @FXML
-    private Tab bookIssueTab;
-    @FXML
-    private Tab renewTab;
-    @FXML
-    private JFXTabPane mainTabPane;
-    @FXML
-    private JFXButton btnIssue;
+ 
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -147,14 +91,16 @@ public class MainController implements Initializable, BookReturnCallback {
             drawer.toggle();
         });
         drawer.setOnDrawerOpening((event) -> {
-            task.setRate(task.getRate() * -1);
-            task.play();
+          //  task.setRate(task.getRate() * -1);
+          //  task.play();
+          //  rootPane.setStyle(" -fx-background-insets: 0 12 0 0;");
+            drawer.setStyle(" -fx-background-insets: 12 0 12 12;");
             drawer.toFront();
         });
         drawer.setOnDrawerClosed((event) -> {
             drawer.toBack();
-            task.setRate(task.getRate() * -1);
-            task.play();
+           // task.setRate(task.getRate() * -1);
+           // task.play();
         });
     }
 
